@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="">
+    <title>Chess</title>
+</head>
+<body>
+
+    <section class="game">
+        <!-- <button class = "newGame">New Game</button> -->
+        <button class = "loadGame">Load Game</button>
+        <button class = "flip-board">Flip-board↺</button>
+        <button class = "flip-peices">Flip-peices⇆</button>
+        <button class = "options">Settings</button>
+        <button class = "undo">Undo-move</button>
+        <div class="checkMateModal none">
+            <div class="checkMateText">CHECK MATE!</div>
+            <div class="winner">Black wins</div>
+            <button class="newGame">New Game</button><br>
+            <button class="previewGame">Preview Game</button>
+        </div>
+        <div class="overlay hidden"></div>
+        <div class="promotionModal hidden">
+            <div class="queen modalChilds"><img src="images/queen.png" alt=""> <p>Queen</p></div>
+            <div class="knight modalChilds"><img src="images/knight.png" alt=""><p>knight</p></div>
+            <div class="bishop modalChilds"><img src="images/bishop.png" alt=""><p>bishop</p></div>
+            <div class="rook modalChilds"><img src="images/rook.png" alt=""><p>rook</p></div>
+        </div>
+        <div class="optionsModal hidden ">
+            <div class="closeButton close">&times;</div>
+            <div class="previewBoard">
+                <div class="leftBoard controlThemeBoardButtons">◀️</div>
+                <div class="boardImage">
+                    <img src="images/board-3.jpg" alt="">
+
+                </div>
+                <div class="rightBoard controlThemeBoardButtons">▶️</div>
+            </div>
+            <div class="choiceButtons">
+                <button class="cancel close">Cancel</button>
+                <button class="save">Save</button>
+            </div>
+        </div>
+    <div class ="board">
+        <img src="images/board-3.jpg" alt="">
+        <div class="peices">
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+                <div class="peice"><img src="images/empty.png" alt=""></div>
+        </div>
+        
+    </div>
+</section>
+
+<script src="js/script.mjs" type = "module"></script>
+</body>
+
+</html>
+
